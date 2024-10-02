@@ -1,7 +1,7 @@
 from imbios/bun-node:latest-20-debian as frontend-build
 copy dashboard .
 run bun install
-run bun build
+run bun run build
 
 from oven/bun:latest as base
 copy backend .
