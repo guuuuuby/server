@@ -3,7 +3,7 @@ copy dashboard .
 run bun install
 run bun build
 
-from over/bun:latest as base
+from oven/bun:latest as base
 copy backend .
 copy --from=frontend-build dist static
 run bun install
