@@ -5,6 +5,8 @@ run bun build
 
 from over/bun:latest as base
 copy backend .
-copy frontend-build:dist static
+copy --from=frontend-build dist static
 run bun install
+expose 8001
+expose 8000
 entrypoint bun start
